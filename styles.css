@@ -1,0 +1,193 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--dark-text);
+}
+
+:root
+{
+    --facebook-blue: #1877f2;
+    --success-green: #42b72a;
+    --background-grey: #e9ebee;
+    --border-color: #9e9595;
+    --dark-text: #1c1e21;
+    --white: white;
+    --card-shadow: rgba(0, 0, 0, 0.08);
+}
+
+body
+{
+    background-color: var(--background-grey);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+main
+{
+    margin-top: 2.5%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    padding: 1.25rem;
+    box-shadow: 3px 6px 3px 0 var(--card-shadow);
+    border-radius: 0.5rem;
+    gap: 1rem;
+    background: var(--white);
+}
+
+form header
+{
+    text-align: center;
+}
+
+form section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+fieldset
+{
+    border: none;
+}
+
+input
+{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+button
+{
+    color: var(--white);
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--success-green);
+}
+
+legend
+{
+    padding: 0.5rem 0;
+}
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#personalInfo
+{
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+
+#prenom
+{
+    grid-column: span 3;
+}
+
+#nomFamille
+{
+    grid-column: span 3;
+}
+
+#identifiant
+{
+    grid-column: span 6;
+}
+
+#password
+{
+    grid-column: span 6;
+}
+
+#sectionDate
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+}
+
+#sectionDate select
+{
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: span 2;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: var(--card-shadow);
+    font-weight: bold;
+}
+
+#sectionGenre
+{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+}
+
+#sectionGenre label
+{
+    grid-column: span 2;
+    display: flex;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: clamp(0.25rem, 1rem, 1.5rem);   
+}
+
+@media (max-width: 768px) {
+    #prenom
+    {
+        grid-column: span 6;
+    }
+
+    #nomFamille
+    {
+        grid-column: span 6;
+    }
+
+    #sectionDate select
+    {
+        grid-column: span 6;
+    }
+
+    #sectionGenre
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    #sectionGenre label
+    {
+        max-width: 50%;
+    }
+}
