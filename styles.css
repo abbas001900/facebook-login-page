@@ -13,6 +13,7 @@
     --success-green: #42b72a;
     --background-grey: #e9ebee;
     --border-color: #9e9595;
+    --select-color: #ccc4c4;
     --dark-text: #1c1e21;
     --white: white;
     --card-shadow: rgba(0, 0, 0, 0.08);
@@ -22,8 +23,10 @@ body
 {
     background-color: var(--background-grey);
     display: flex;
-    align-items: start;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 main
@@ -65,11 +68,16 @@ fieldset
     border: none;
 }
 
-input
+#personalInfo input
 {
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--border-color);
+}
+
+#personalInfo input:focus
+{
+    outline: 1px solid var(--dark-text);
 }
 
 button
@@ -97,13 +105,29 @@ footer
     gap: 1rem;
 }
 
+footer p
+{
+    line-height: 1.5rem;
+}
+
+a
+{
+    color: var(--facebook-blue);
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
 #personalInfo
 {
     padding-top: 1rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 1.5rem;
     border-top: 1px solid var(--border-color);
 }
 
@@ -140,11 +164,16 @@ footer
     display: flex;
     flex-direction: column-reverse;
     grid-column: span 2;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--select-color);
     padding: 0.5rem;
     border-radius: 0.5rem;
     background: var(--card-shadow);
     font-weight: bold;
+}
+
+#sectionDate select:focus
+{
+    outline: 1px solid var(--dark-text);
 }
 
 #sectionGenre
